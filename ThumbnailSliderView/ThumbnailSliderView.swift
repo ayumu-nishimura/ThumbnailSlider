@@ -10,7 +10,7 @@ import UIKit
 class ThumbnailSliderView: UIView, UICollectionViewDelegateFlowLayout {
 
     private var collectionView: UICollectionView!
-    private let collectionViewLayout = UICollectionViewFlowLayout()
+    private let collectionViewLayout = ThumbnailCollectionViewFlowLayout()
     private let viewHeight: CGFloat = 120.0
     private let cellScale: CGFloat = 0.8
     private var thumbnails = [UIImage]()
@@ -33,8 +33,6 @@ class ThumbnailSliderView: UIView, UICollectionViewDelegateFlowLayout {
             UIImage(named: "Image 13")!,
             UIImage(named: "Image 14")!,
         ]
-
-        collectionViewLayout.scrollDirection = .horizontal
 
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout)
         self.addSubview(collectionView)
